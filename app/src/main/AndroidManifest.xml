@@ -10,9 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity android:name=".mvp.view.MainActivity" />
-        <activity android:name=".moxy.view.MoxyMoxyMainActivity">
+        <activity android:name=".moxy.view.MoxyMainActivity">
+        </activity>
+        <activity android:name=".async.view.AsyncMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
