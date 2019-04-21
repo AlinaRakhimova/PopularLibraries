@@ -15,7 +15,8 @@
         <activity android:name=".moxy.view.MoxyMainActivity">
         </activity>
         <activity android:name=".async.view.AsyncMainActivity" />
-        <activity android:name=".observer.view.ObserverActivity">
+        <activity android:name=".observer.view.ObserverActivity" />
+        <activity android:name=".rx.view.RxActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
