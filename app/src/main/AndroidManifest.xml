@@ -18,6 +18,8 @@
         <activity android:name=".observer.view.ObserverActivity" />
         <activity android:name=".rx.view.RxActivity" />
         <activity android:name=".rxSingle.view.SingleActivity">
+        </activity>
+        <activity android:name=".gson.GsonActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
