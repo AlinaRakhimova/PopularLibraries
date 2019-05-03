@@ -22,7 +22,7 @@ public interface UserDao {
     long insert(User user);
 
     @Insert
-    List<Long> insertList(List<User> fruits);
+    List<Long> insertList(List<User> users);
 
     @Delete
     int delete(User user);

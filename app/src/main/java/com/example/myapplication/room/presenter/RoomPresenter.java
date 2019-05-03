@@ -60,13 +60,13 @@ public class RoomPresenter extends MvpPresenter<RoomView> {
         user2.surname = "Petrov";
         user2.age = "28";
 
-        List<User> fruitList = new ArrayList<>();
-        fruitList.add(user);
-        fruitList.add(user2);
+        List<User> userList = new ArrayList<>();
+        userList.add(user);
+        userList.add(user2);
 
         return Single.create((SingleOnSubscribe<Long>) emitter -> {
 
-            List<Long> longList = userDao.insertList(fruitList);
+            List<Long> longList = userDao.insertList(userList);
 
             emitter.onSuccess(longList.get(0));
         }).subscribeOn(Schedulers.io());
