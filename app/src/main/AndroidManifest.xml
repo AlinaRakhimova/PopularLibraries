@@ -24,7 +24,8 @@
         <activity android:name=".gson.GsonActivity" />
         <activity android:name=".retrofit.view.RetrofitActivity">
         </activity>
-        <activity android:name=".room.view.RoomActivity">
+        <activity android:name=".room.view.RoomActivity"></activity>
+        <activity android:name=".noDi.NoDiActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
