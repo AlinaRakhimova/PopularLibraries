@@ -25,6 +25,8 @@
         <activity android:name=".retrofit.view.RetrofitActivity">
         </activity>
         <activity android:name=".room.view.RoomActivity">
+        </activity>
+        <activity android:name=".di.DIActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
