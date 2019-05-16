@@ -1,5 +1,6 @@
 package com.example.myapplication.mockito;
 
+import com.example.myapplication.mockito.di.DaggerTestComponent;
 import com.example.myapplication.mockito.di.TestComponent;
 import com.example.myapplication.mockito.di.TestModule;
 import com.example.myapplication.retrofit.model.RetrofitApi;
@@ -41,7 +42,7 @@ public class PresenterTest {
     }
 
     @Test
-    public void getString_isCorrect() {
+    public void getAvatar_isCorrect() {
         TestComponent component = DaggerTestComponent.builder()
                 .testModule(new TestModule() {
 
@@ -49,7 +50,7 @@ public class PresenterTest {
                     public RetrofitApi provideRetrofitApi() {
                         RetrofitApi retrofitApi = super.provideRetrofitApi();
                         User user = new User();
-                        user.avatarUrl = "http://github.com/user/JackAvatar.jpg";
+                        user.avatarUrl = "https://avatars0.githubusercontent.com/u/66577?s=400&v=4";
                         Mockito.when(retrofitApi.requestServer()).thenReturn(Observable.just(user));
                         return retrofitApi;
                     }
@@ -58,7 +59,7 @@ public class PresenterTest {
         component.inject(presenter);
         presenter.attachView(retrofitView);
         presenter.getAvatar();
-        Mockito.verify(retrofitView).showAvatar("http://github.com/user/JackAvatar.jpg");
+        Mockito.verify(retrofitView).showAvatar("https://avatars0.githubusercontent.com/u/66577?s=400&v=4");
     }
 
 }
